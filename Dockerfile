@@ -19,3 +19,5 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 USER root
 RUN chmod 0755 /home/sage
 
+COPY --chown=root:bin artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh 
+

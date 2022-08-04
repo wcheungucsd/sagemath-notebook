@@ -16,8 +16,11 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
+USER sage
+RUN sage -i jupyterlab jupyterlab_widgets retrolab
+
 USER root
-RUN chmod 0755 /home/sage
+RUN chmod -R 0755 /home/sage
 
 COPY --chown=root:bin artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh 
 

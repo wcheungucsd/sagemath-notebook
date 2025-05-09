@@ -14,7 +14,9 @@ ARG BASE_CONTAINER=sagemath/sagemath:latest
 
 FROM $BASE_CONTAINER
 
-LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
+#LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
+LABEL maintainer="wcheung@ucsd.edu"
+
 
 USER sage
 RUN sage -i jupyterlab jupyterlab_widgets retrolab

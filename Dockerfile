@@ -18,8 +18,8 @@ FROM $BASE_CONTAINER
 LABEL maintainer="wcheung@ucsd.edu"
 
 
-USER sage
-RUN sage -i jupyterlab jupyterlab_widgets retrolab
+#USER sage
+#RUN sage -i jupyterlab jupyterlab_widgets retrolab
 
 USER root
 RUN chmod -R 0755 /home/sage
